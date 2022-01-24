@@ -12,11 +12,11 @@ bughunter0 = Client(
 @bughunter0.on_message(filters.new_chat_members)
 async def welcome(bot,message):
 	chatid= message.chat.id
-	await bot.send_message(text=f"Welcome {message.from_user.mention} to {message.chat.username} ,  Happy to have here",chat_id=chatid)
+	await bot.send_message(text=f"Hoşgeldin {message.from_user.mention} to {message.chat.username} ,  Burada olmandan mutlu oldum",chat_id=chatid)
 	
 @bughunter0.on_message(filters.left_chat_member)
 async def goodbye(bot,message):
 	chatid= message.chat.id
-	await bot.send_message(text=f"Bye ,  {message.from_user.mention} , Have a Nice Day",chat_id=chatid)
+	await bot.send_message(text=f"Görüşürüz ,  {message.from_user.mention} , iyi günler dileğiyle",chat_id=chatid)
 	
 bughunter0.run()
